@@ -3,6 +3,7 @@ import FormContext from './FormContext'
 
 const FormContextProvider = ({children}) => {
   
+  const [FormStatus, setFormstatus] = useState(false)  
   const [formField, setFormField] = useState({
     name:'',
     email:'',
@@ -11,7 +12,7 @@ const FormContextProvider = ({children}) => {
 
   return (
     <div>
-      <FormContext.Provider value={{formField, setFormField}}>
+      <FormContext.Provider value={{formField, setFormField , FormStatus , setFormstatus }}>
         {children}
       </FormContext.Provider>
     </div>
