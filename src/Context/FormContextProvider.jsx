@@ -11,11 +11,9 @@ const FormContextProvider = ({children}) => {
   })  
 
   return (
-    <div>
       <FormContext.Provider value={{formField, setFormField , FormStatus , setFormstatus }}>
         {children}
       </FormContext.Provider>
-    </div>
   )
 }
 
