@@ -96,6 +96,7 @@ button {
   display: none;
 }
 
+
 .step.active {
   display: block;
 }

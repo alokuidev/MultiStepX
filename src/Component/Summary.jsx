@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import FormContext from '../Context/FormContext';
 
 function Summary() {
+  
+  const {formField} = useContext(FormContext)  
+
+  if (!formField.name && !formField.email && !formField.pass) return null;
   return (
     <>
       <div className="summary-container">
