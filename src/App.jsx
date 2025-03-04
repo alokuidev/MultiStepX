@@ -1,33 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="form-container">
+    <h2>Complete Your Profile</h2>
+    <p className="subtitle">Fill in the details to proceed</p>
+
+    <div className="step active">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name"/>
+    </div>
+
+    <div className="step">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email"/>
+    </div>
+
+    <div className="step">
+        <label for="password">Create Password</label>
+        <input type="password" id="password" placeholder="Enter a secure password"/>
+    </div>
+
+    <div className="buttons">
+        <button id="prevBtn" disabled>⬅ Previous</button>
+        <button id="nextBtn">Next ➡</button>
+    </div>
+</div>
+
     </>
   )
 }
